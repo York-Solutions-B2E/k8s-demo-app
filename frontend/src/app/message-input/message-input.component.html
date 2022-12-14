@@ -1,0 +1,15 @@
+
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+  <mat-form-field>
+    <mat-label>Leave a message</mat-label>
+    <textarea
+      ngModel matInput
+      name="message"
+      placeholder="Add a message...">
+    </textarea>
+  </mat-form-field>
+  <br>
+  <button mat-button color="primary">Add Message</button>
+</form>

@@ -1,0 +1,5 @@
+<mat-list>
+  <mat-list-item *ngFor="let message of messageService.$messageList | async">
+    {{message.id}} : {{message.message}}
+  </mat-list-item>
+</mat-list>
