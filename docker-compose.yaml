@@ -12,7 +12,7 @@ services:
       POSTGRES_PASSWORD: "admin"
       POSTGRES_DATABASE: "postgres"
   backend:
-    image: "backend"
+    build: ./backend
     networks:
       default:
         ipv4_address: 10.10.10.200
@@ -21,10 +21,9 @@ services:
     depends_on:
       - database
   frontend:
-    image: "frontend"
+    build: ./frontend
     ports:
       - "80:80"
-
 
 networks:
   default:
